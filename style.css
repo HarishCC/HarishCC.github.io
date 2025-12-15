@@ -32,10 +32,24 @@ section {
   padding: 120px 24px;
 }
 
+section:not(:first-of-type) {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+/* ===============================
+   Separators
+================================ */
 hr {
   border: none;
   height: 1px;
-  background: linear-gradient(to right, transparent, #222, transparent);
+  margin: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
 }
 
 /* ===============================
@@ -71,6 +85,31 @@ ul {
 li {
   margin-bottom: 16px;
   font-size: 1.05rem;
+}
+
+/* ===============================
+   Hero Emphasis
+================================ */
+section:first-of-type {
+  padding-top: 160px;
+  padding-bottom: 180px;
+}
+
+section:first-of-type p {
+  font-size: 1.15rem;
+  opacity: 0.75;
+  max-width: 680px;
+}
+
+/* ===============================
+   Content Rhythm
+================================ */
+section p:last-child {
+  margin-bottom: 0;
+}
+
+section ul:last-child {
+  margin-bottom: 0;
 }
 
 /* ===============================
