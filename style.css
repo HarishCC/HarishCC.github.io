@@ -1,4 +1,6 @@
-/* Base */
+/* ===============================
+   Base Reset
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -9,15 +11,21 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===============================
+   Global
+================================ */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background: radial-gradient(circle at top, #111 0%, #000 60%);
   color: #eaeaea;
-  line-height: 1.7;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
 }
 
-/* Layout */
+/* ===============================
+   Layout
+================================ */
 section {
   max-width: 1100px;
   margin: 0 auto;
@@ -30,22 +38,29 @@ hr {
   background: linear-gradient(to right, transparent, #222, transparent);
 }
 
-/* Headings */
+/* ===============================
+   Typography
+================================ */
 h1 {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  line-height: 1.1;
-  margin-bottom: 24px;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 32px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 36px;
+  letter-spacing: -0.01em;
 }
 
 p {
-  max-width: 720px;
-  margin-bottom: 24px;
-  opacity: 0.9;
+  max-width: 760px;
+  font-size: 1.05rem;
+  margin-bottom: 26px;
+  opacity: 0.88;
 }
 
 ul {
@@ -54,19 +69,25 @@ ul {
 }
 
 li {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
 }
 
-/* Links */
+/* ===============================
+   Links
+================================ */
 a {
   color: #8ab4ff;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
-/* Scroll Reveal */
+/* ===============================
+   Scroll Reveal Animation
+================================ */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
