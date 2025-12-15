@@ -1,104 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harish | AI Cinematics & 3D Worlds</title>
+/* ===============================
+   Base Reset
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- SEO -->
-  <meta name="description" content="Harish — Scaling AI-powered cinematics, 3D worlds, and intelligent creative systems.">
-  <meta name="author" content="Harish">
+html {
+  scroll-behavior: smooth;
+}
 
-  <!-- Inter Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+/* ===============================
+   Global
+================================ */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: radial-gradient(circle at top, #111 0%, #000 60%);
+  color: #eaeaea;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* ===============================
+   Layout
+================================ */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 24px;
+  position: relative;
+  z-index: 1;
+}
 
-  <!-- HERO -->
-  <section class="reveal">
-    <h1>Scaling AI-Powered Cinematics & 3D Worlds</h1>
-    <p>Systems Builder • Team Architect • Speed, Intelligence & Impact</p>
-  </section>
+section:not(:first-of-type) {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
 
-  <hr />
+/* ===============================
+   Separators
+================================ */
+hr {
+  border: none;
+  height: 1px;
+  margin: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+}
 
-  <!-- WHAT I DO -->
-  <section class="reveal">
-    <h2>What I Do</h2>
-    <ul>
-      <li>AI-first cinematic production that crushes traditional timelines</li>
-      <li>High-speed 3D pipelines built for scale, not bottlenecks</li>
-      <li>Hyperreal environments, characters & digital ecosystems</li>
-      <li>Creative-tech integration that eliminates friction</li>
-      <li>Team building at any scale + aggressive lead generation</li>
-    </ul>
-    <p>
-      I’m here to disrupt how visual content is created — pushing AI + art into a new era of speed,
-      intelligence, and impact.
-    </p>
-  </section>
+/* ===============================
+   Typography
+================================ */
+h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
 
-  <hr />
+h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 36px;
+  letter-spacing: -0.01em;
+}
 
-  <!-- ABOUT -->
-  <section class="reveal">
-    <h2>About</h2>
-    <p>
-      I’m building the future of AI-driven content production — where creativity scales like software
-      and visual storytelling moves at the speed of intelligence.
-    </p>
-    <p>
-      With 15+ years in 3D, I don’t just make content. I design systems, pipelines, and teams that
-      outperform traditional production by orders of magnitude.
-    </p>
-  </section>
+p {
+  max-width: 760px;
+  font-size: 1.05rem;
+  margin-bottom: 26px;
+  opacity: 0.88;
+}
 
-  <hr />
+ul {
+  margin-left: 20px;
+  margin-bottom: 32px;
+}
 
-  <!-- NOW BUILDING -->
-  <section class="reveal">
-    <h2>What I’m Building Now</h2>
-    <ul>
-      <li>AI-powered films, ads, and business videos</li>
-      <li>Next-gen game worlds, characters & creatures with hyperreal precision</li>
-      <li>Automation-first workflows that amplify creativity</li>
-    </ul>
-  </section>
+li {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
 
-  <hr />
+/* ===============================
+   Hero Emphasis
+================================ */
+section:first-of-type {
+  padding-top: 160px;
+  padding-bottom: 180px;
+}
 
-  <!-- CONTACT -->
-  <section class="reveal">
-    <h2>Connect</h2>
-    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-    <p>LinkedIn: <a href="#" target="_blank">Add later</a></p>
-  </section>
+section:first-of-type p {
+  font-size: 1.15rem;
+  opacity: 0.75;
+  max-width: 680px;
+}
 
-  <!-- Scroll Reveal Script -->
-  <script>
-    const reveals = document.querySelectorAll(".reveal");
+/* ===============================
+   Content Rhythm
+================================ */
+section p:last-child {
+  margin-bottom: 0;
+}
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-          }
-        });
-      },
-      { threshold: 0.15 }
+section ul:last-child {
+  margin-bottom: 0;
+}
+
+/* ===============================
+   Links
+================================ */
+a {
+  color: #8ab4ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   Scroll Reveal Animation
+================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   Cinematic Grain Overlay (Visible)
+================================ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.08;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 3px
     );
+  animation: grainMove 0.4s steps(2) infinite;
+}
 
-    reveals.forEach((section) => observer.observe(section));
-  </script>
-
-</body>
-</html>
+@keyframes grainMove {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
